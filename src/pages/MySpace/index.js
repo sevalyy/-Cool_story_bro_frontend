@@ -25,11 +25,13 @@ export default function MySpace() {
 
   if (token === null) {
     navigate("/");
+    return;
   }
 
   if (space === null) {
     return <Loading />;
   }
+  console.log("-->>", space.stories);
 
   const displayButtons = profile?.id === space.userId;
 

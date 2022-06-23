@@ -19,7 +19,11 @@ export const signUp = (name, email, password) => {
       });
 
       dispatch(
-        loginSuccess({ token: response.data.token, user: response.data.user })
+        //burada da space'i response olarak gonderiyoruz ki state
+        loginSuccess({
+          token: response.data.token,
+          user: response.data.user,
+        })
       );
       dispatch(showMessageWithTimeout("success", true, "account created"));
       dispatch(appDoneLoading());
@@ -58,7 +62,10 @@ export const login = (email, password) => {
       });
 
       dispatch(
-        loginSuccess({ token: response.data.token, user: response.data.user })
+        loginSuccess({
+          token: response.data.token,
+          user: response.data.user,
+        })
       );
       dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
       dispatch(appDoneLoading());

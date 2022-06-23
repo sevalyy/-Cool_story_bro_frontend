@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbb7279-f4e6-4f4a-8d89-271deaabed3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/-Cool_story_bro_frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Space/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Space/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/StoryCarousel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StoryCarousel/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MySpace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MySpace/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SignUp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SpaceDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SpaceDetails/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Spaces/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Spaces/index.js" afterDir="false" />
@@ -47,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1656007578408</updated>
       <workItem from="1656007582251" duration="311000" />
-      <workItem from="1656007935119" duration="383000" />
+      <workItem from="1656007935119" duration="572000" />
+      <workItem from="1656008550654" duration="1000" />
     </task>
     <servers />
   </component>
@@ -64,5 +70,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
