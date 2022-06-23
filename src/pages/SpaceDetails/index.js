@@ -7,10 +7,12 @@ import Container from "react-bootstrap/Container";
 import Loading from "../../components/Loading";
 import { fetchSpaceById } from "../../store/spaces/actions";
 import { selectSpaceDetails } from "../../store/spaces/selectors";
+import { selectUser } from "../../store/user/selectors";
 
 export default function SpaceDetails() {
   const { id } = useParams();
   const space = useSelector(selectSpaceDetails);
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,9 +31,11 @@ export default function SpaceDetails() {
         color={space.color}
         showLink={false}
       />
+      <hr />
       <Container>
-        <StoryCarousel space={space} />
+        <StoryCarousel space={space} owner={space.userId === user.id} />
       </Container>
+      <hr />
     </>
   );
 }

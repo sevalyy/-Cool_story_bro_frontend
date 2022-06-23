@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Space(props) {
   return (
+    //sayfanin ustunde gorunun buyuk alan icin jumbotron deniliyor.
     <Jumbotron
       style={{
         backgroundColor: props.backgroundColor,

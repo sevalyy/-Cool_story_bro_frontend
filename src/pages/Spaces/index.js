@@ -9,6 +9,7 @@ import Space from "../../components/Space";
 export default function Spaces() {
   const dispatch = useDispatch();
   const spaces = useSelector(selectSpaces);
+  // const stories = useSelector(selectStories);
 
   useEffect(() => {
     dispatch(fetchSpaces());
@@ -20,7 +21,7 @@ export default function Spaces() {
         <h1>Spaces</h1>
       </Jumbotron>
       <Container>
-        {spaces.map(space => {
+        {spaces.map((space) => {
           return (
             <Space
               key={space.id}

@@ -4,6 +4,7 @@ import spacesReducer from "./spaces/slice";
 
 import userReducer from "./user/slice";
 
+//don't forget to take them here!!!
 export default configureStore({
   reducer: {
     appState: appStateReducer,
