@@ -8,24 +8,16 @@ import Loading from "../../components/Loading";
 import { fetchSpaceById } from "../../store/spaces/actions";
 import { selectSpaceDetails } from "../../store/spaces/selectors";
 import { selectUser } from "../../store/user/selectors";
-import { useNavigate } from "react-router-dom";
-import { selectToken } from "../../store/user/selectors";
+
 export default function SpaceDetails() {
   const { id } = useParams();
   const space = useSelector(selectSpaceDetails);
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-  const token = useSelector(selectToken);
-  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchSpaceById(id));
   }, [dispatch, id]);
-
-  if (token === null) {
-    navigate("/");
-    return;
-  }
 
   if (!space || parseInt(space.id) !== parseInt(id)) return <Loading />;
 
@@ -41,7 +33,7 @@ export default function SpaceDetails() {
       />
       <hr />
       <Container>
-        <StoryCarousel space={space} owner={space.userId === user.id} />
+        <StoryCarousel space={space} owner={user && space.userId === user.id} />
       </Container>
       <hr />
     </>

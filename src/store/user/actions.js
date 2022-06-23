@@ -135,7 +135,7 @@ export const updateMySpace = (title, description, backgroundColor, color) => {
       const { space, token } = getState().user;
       dispatch(appLoading());
 
-      const response = await axios.patch(
+      const response = await axios.put(
         `${apiUrl}/spaces/${space.id}`,
         {
           title,
@@ -154,7 +154,11 @@ export const updateMySpace = (title, description, backgroundColor, color) => {
       dispatch(
         showMessageWithTimeout("success", false, "update successfull", 3000)
       );
-      dispatch(spaceUpdated(response.data.space));
+
+      //Here code was waiting for {space: {...}}
+      //However we return space directly {...}
+      //dispatch(spaceUpdated(response.data.space));
+      dispatch(spaceUpdated(response.data));
       dispatch(appDoneLoading());
     } catch (e) {
       console.log(e.message);
